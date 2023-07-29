@@ -12,27 +12,26 @@ import {
   ArrowSmallRightIcon,
 } from "@heroicons/react/24/outline";
 
-import {FaWhatsapp} from 'react-icons/fa'
+import { FaWhatsapp } from "react-icons/fa";
 
 interface NavItemPropsType {
   children: React.ReactNode;
 }
 
 interface IFirstSectionProps {
-    call: string | undefined;
-    description?: string | undefined;
-    photoBase64?: string | undefined;
-    src?: any;
-    onClick?: any;
-    mainColor?: string | undefined;
-    secondaryColor?: string | undefined;
-    coverKeyWords?: string;
-    isFirstPhotoHidden?: string | undefined;
-    firstButtonText?: string | undefined;
-    isVideo?: string;
-    name: string | undefined;
+  call: string | undefined;
+  description?: string | undefined;
+  photoBase64?: string | undefined;
+  src?: any;
+  onClick?: any;
+  mainColor?: string | undefined;
+  secondaryColor?: string | undefined;
+  coverKeyWords?: string;
+  isFirstPhotoHidden?: string | undefined;
+  firstButtonText?: string | undefined;
+  isVideo?: string;
+  name: string | undefined;
 }
-
 
 function NavItem({ children }: NavItemPropsType) {
   return (
@@ -50,14 +49,27 @@ function NavItem({ children }: NavItemPropsType) {
   );
 }
 
-export function HeroSectionTwo({ mainColor, secondaryColor, name, isVideo ,call, description, photoBase64, firstButtonText, src, onClick, coverKeyWords, isFirstPhotoHidden }: IFirstSectionProps) {
+function Header({
+  mainColor,
+  secondaryColor,
+  name,
+  isVideo,
+  call,
+  description,
+  photoBase64,
+  firstButtonText,
+  src,
+  onClick,
+  coverKeyWords,
+  isFirstPhotoHidden,
+}: IFirstSectionProps) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen((cur) => !cur);
 
   React.useEffect(() => {
     window.addEventListener(
       "resize",
-      () => window.innerWidth >= 960 && setOpen(false)
+      () => window.innerWidth >= 960 && setOpen(false),
     );
   }, []);
 
@@ -70,7 +82,7 @@ export function HeroSectionTwo({ mainColor, secondaryColor, name, isVideo ,call,
       >
         <div className="container mx-auto flex items-center">
           <Typography color="blue-gray" className="!mb-0 !font-bold">
-           {name}
+            {name}
           </Typography>
           <ul className="ml-10 hidden items-center gap-6 lg:flex">
             <NavItem>Home</NavItem>
@@ -125,18 +137,15 @@ export function HeroSectionTwo({ mainColor, secondaryColor, name, isVideo ,call,
               color="blue-gray"
               className="mb-8 leading-tight lg:text-6xl"
             >
-                {call}
+              {call}
             </Typography>
             <Typography variant="lead" color="gray" className="lg:pr-20">
-                {description}
+              {description}
             </Typography>
             <div className="mt-12 flex flex-wrap justify-center gap-3 lg:justify-start">
               <Button size="lg" className="flex items-center">
-                <i
-                  className="-mt-1 mr-1.5 h-6 w-6"
-                >
-                <FaWhatsapp style={{ height: '100%', width: '100%'}}/>
-
+                <i className="-mt-1 mr-1.5 h-6 w-6">
+                  <FaWhatsapp style={{ height: "100%", width: "100%" }} />
                 </i>
                 Vamos conversar!
               </Button>
@@ -151,4 +160,4 @@ export function HeroSectionTwo({ mainColor, secondaryColor, name, isVideo ,call,
   );
 }
 
-export default HeroSectionTwo;
+export { Header };

@@ -118,8 +118,8 @@ export interface Contact {
   isThirdButtonDisabled: string;
 
   isFourthSecVisible: string; // Desabilita a quarta sessão ["on" / "off"]
-  isAgendaVisible: string;    // Desabilita os horários ["on" / "off"]
-  isAddressVisible: string;   // Desabilita a endereço ["on" / "off"]
+  isAgendaVisible: string; // Desabilita os horários ["on" / "off"]
+  isAddressVisible: string; // Desabilita a endereço ["on" / "off"]
 
   isFirstPhotoHidden: string; // Desabilita a primera foto ["on" / "off"]
   galleryTitleColor: string; // Cor do título da galeria
@@ -135,4 +135,3 @@ export interface Contact {
 }
 
 //
-

@@ -1,20 +1,33 @@
-import { Typography, Button } from "@material-tailwind/react";
+import React from 'react';
+import { Typography, Button } from '@material-tailwind/react';
 
 interface IFifthSectionProp {
-  photoBase64: string | undefined;
-  history: string | undefined;
-  src: any;
-  onClick: any;
-  isAutonomous: string | undefined;
-  mainColor: string | undefined;
-  accentColor: string | undefined;
-  coverKeyWords: string | undefined;
-  fifthTitle: string | undefined;
-  fifthButtonText: string | undefined;
-  convertedName: string | undefined
+  photoBase64?: string | undefined;
+  history?: string | undefined;
+  src?: any;
+  onClick?: any;
+  isAutonomous?: string | undefined;
+  mainColor?: string | undefined;
+  accentColor?: string | undefined;
+  coverKeyWords?: string | undefined;
+  fifthTitle?: string | undefined;
+  fifthButtonText?: string | undefined;
+  convertedName?: string | undefined;
 }
 
-export function ContentSectionOne({isAutonomous, convertedName, fifthTitle, mainColor, accentColor, photoBase64, history, fifthButtonText, src, onClick, coverKeyWords}: IFifthSectionProp) {
+function FifthSection({
+  isAutonomous,
+  convertedName,
+  fifthTitle,
+  mainColor,
+  accentColor,
+  photoBase64,
+  history,
+  fifthButtonText,
+  src,
+  onClick,
+  coverKeyWords,
+}: IFifthSectionProp): JSX.Element {
   return (
     <section className="">
       <div className="container mx-auto grid items-center lg:grid-cols-2">
@@ -26,7 +39,7 @@ export function ContentSectionOne({isAutonomous, convertedName, fifthTitle, main
             No lugar certo na hora certa
           </Typography>
           <Typography variant="lead" color="gray" className="mb-12">
-            { history }
+            {history}
           </Typography>
         </div>
         <img
@@ -39,4 +52,4 @@ export function ContentSectionOne({isAutonomous, convertedName, fifthTitle, main
   );
 }
 
-export default ContentSectionOne;
+export { FifthSection };

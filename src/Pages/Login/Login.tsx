@@ -5,7 +5,7 @@ export function SignIn() {
     <section className="grid h-screen items-center ">
       <div className="my-auto p-8 text-center sm:p-10 md:p-20 ">
         <Typography variant="h3" color="blue-gray" className="mb-2">
-         Bem vindo!
+          Bem vindo!
         </Typography>
         <Typography color="gray" className="mb-16">
           Insira seus dados para acessar o formulário de edição do seu site
@@ -13,7 +13,7 @@ export function SignIn() {
 
         <form action="#" className="mx-auto max-w-[24rem] text-left">
           <div className="mb-4">
-            <Input size="lg" label="Email" type="email" name="email"/>
+            <Input size="lg" label="Email" type="email" name="email" />
           </div>
           <div className="mb-4">
             <Input size="lg" label="Password" type="password" name="password" />

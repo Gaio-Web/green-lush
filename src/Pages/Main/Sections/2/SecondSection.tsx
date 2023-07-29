@@ -1,27 +1,23 @@
-import React from "react";
-import { Typography, Button } from "@material-tailwind/react";
-import {
-  PlayCircleIcon,
-  BoltIcon,
-  ArrowsPointingOutIcon,
-} from "@heroicons/react/24/outline";
+import React from 'react';
+import { Typography, Button } from '@material-tailwind/react';
+import { BoltIcon } from '@heroicons/react/24/outline';
 
 interface IconPropsType {
   children: React.ReactNode;
 }
 
 interface ISecondSectionProp {
-    photoBase64?: string | undefined;
-    products?: string | undefined;
-    src?: any;
-    onClick?: any;
-    isAutonomous?: any;
-    mainColor?: string | undefined;
-    accentColor?: string | undefined;
-    coverKeyWords?: string | undefined;
-    secondTitle?: string | undefined;
-    secondButtonText?: string | undefined;
-  }
+  photoBase64?: string | undefined;
+  products?: string | undefined;
+  src?: any;
+  onClick?: any;
+  isAutonomous?: any;
+  mainColor?: string | undefined;
+  accentColor?: string | undefined;
+  coverKeyWords?: string | undefined;
+  secondTitle?: string | undefined;
+  secondButtonText?: string | undefined;
+}
 
 function Icon({ children }: IconPropsType) {
   return (
@@ -31,7 +27,18 @@ function Icon({ children }: IconPropsType) {
   );
 }
 
-export function FeatureSectionThree({ mainColor, accentColor,isAutonomous, secondButtonText, photoBase64, products, src, onClick, coverKeyWords, secondTitle}: ISecondSectionProp) {
+function SecondSection({
+  mainColor,
+  accentColor,
+  isAutonomous,
+  secondButtonText,
+  photoBase64,
+  products,
+  src,
+  onClick,
+  coverKeyWords,
+  secondTitle,
+}: ISecondSectionProp) {
   return (
     <section className="px-4 py-12">
       <div className="container mx-auto">
@@ -48,24 +55,18 @@ export function FeatureSectionThree({ mainColor, accentColor,isAutonomous, secon
               <BoltIcon className="h-6 w-6" strokeWidth={2} />
             </Icon>
             <Typography variant="h3" color="blue-gray" className="mb-2">
-                { secondTitle == '' || secondTitle == null ? (
-                    <>
-                        O que ofereço
-                    </>
-                ) : (
-                    <>
-                        {secondTitle}
-                    </>
-                )
-
-                }
+              {secondTitle == '' || secondTitle == null ? (
+                <>O que ofereço</>
+              ) : (
+                <>{secondTitle}</>
+              )}
             </Typography>
             <Typography
               color="blue-gray"
               variant="lead"
               className="mb-10 font-normal text-gray-700"
             >
-                {products}
+              {products}
             </Typography>
             <div className="flex gap-2">
               <Button size="lg">Contrate um orçamento</Button>
@@ -77,4 +78,4 @@ export function FeatureSectionThree({ mainColor, accentColor,isAutonomous, secon
   );
 }
 
-export default FeatureSectionThree;
+export { SecondSection };
