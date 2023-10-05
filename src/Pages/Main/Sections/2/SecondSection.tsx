@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography, Button } from '@material-tailwind/react';
 import { BoltIcon } from '@heroicons/react/24/outline';
+import CardThree from '../../../Components/CardsSmall/Cards';
 
 interface IconPropsType {
   children: React.ReactNode;
@@ -40,38 +41,32 @@ function SecondSection({
   secondTitle,
 }: ISecondSectionProp) {
   return (
-    <section className="px-4 py-12">
+    <section className="px-4 bg-lush-beige">
       <div className="container mx-auto">
-        <div className="mb-20 grid lg:grid-cols-2">
-          <div className="lg:pr-10">
-            <img
-              src="https://images.unsplash.com/photo-1534120247760-c44c3e4a62f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2996&q=80"
-              alt="background image"
-              className="h-full min-h-[20rem] w-full rounded-xl object-cover"
-            />
-          </div>
-          <div className="grid items-center py-12 px-2 lg:ml-8 lg:py-20">
-            <Icon>
-              <BoltIcon className="h-6 w-6" strokeWidth={2} />
-            </Icon>
-            <Typography variant="h3" color="blue-gray" className="mb-2">
-              {secondTitle == '' || secondTitle == null ? (
-                <>O que ofereço</>
-              ) : (
-                <>{secondTitle}</>
-              )}
-            </Typography>
-            <Typography
-              color="blue-gray"
-              variant="lead"
-              className="mb-10 font-normal text-gray-700"
-            >
-              {products}
-            </Typography>
-            <div className="flex gap-2">
-              <Button size="lg">Contrate um orçamento</Button>
-            </div>
-          </div>
+        <div className="grid items-center py-12 px-2 lg:ml-8 lg:py-20 gap-5">
+          <Typography variant="h3" color="blue-gray" className="mb-2">
+            {secondTitle == '' || secondTitle == null ? (
+              <>O que ofereço</>
+            ) : (
+              <>{secondTitle}</>
+            )}
+          </Typography>
+          <CardThree
+            title="Design & Planning"
+            text="We work with you to design the perfect outdoor space, tailored to your specific needs"
+          />
+          <CardThree
+            title="Hardscaping"
+            text="From patios to retaining walls, we can build the durable features that will take your outdoor space to the next level"
+          />
+          <CardThree
+            title="Lawn & Garden Care"
+            text="We provide full-service lawn care and garden maintenance so that your outdoor space stays lush and beautiful all year long."
+          />
+          <CardThree
+            title="Irrigation & Drainage"
+            text="We can help you conserve water and keep your outdoor space healthy and welldrained with our irrigation and drainage systems."
+          />
         </div>
       </div>
     </section>
