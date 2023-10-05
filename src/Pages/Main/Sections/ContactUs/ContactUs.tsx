@@ -12,7 +12,7 @@ function ContactUs() {
         </Typography>
         <Typography className="mb-8 font-normal text-lush-black">
           Ready to get started on your dream outdoor space? Contact us today to
-          schedule a consultation! 8/30/23 3:13 PM
+          schedule a consultation!
         </Typography>
         <img
           src={Contact}
