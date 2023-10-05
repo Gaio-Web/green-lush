@@ -40,8 +40,11 @@ export default function App() {
 
   if (!data) {
     return (
-      <div>
-        <h1>hue</h1>
+      <div
+        className="h-screen flex items-center justify-center"
+        style={{ backgroundColor: '#fafafa' }}
+      >
+        <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-900"></div>
       </div>
     );
   }
