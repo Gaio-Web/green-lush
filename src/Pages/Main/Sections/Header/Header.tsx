@@ -67,6 +67,10 @@ function Header({
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen((cur) => !cur);
 
+  const openInstagramLink = () => {
+    window.open('https://www.instagram.com/green_lushcorp/', '_blank');
+  };
+
   React.useEffect(() => {
     window.addEventListener(
       'resize',
@@ -89,6 +93,7 @@ function Header({
           <div className="ml-auto hidden gap-2 lg:flex">
             <div className="flex flex-wrap justify-center gap-2">
               <button
+                onClick={openInstagramLink}
                 className="p-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
                 style={{ backgroundColor: '#c13584' }}
               >
